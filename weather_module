@@ -1,8 +1,6 @@
-# i followed the code in stack overflow, and i cant get the lat, lon to get off without messing up the program
-
-
 import requests
 import json
+from pyHS100 import SmartPlug
 
 api_key = "cea276f0dbca870e3eb7ee5b1c563cf0"
 lat = "48.208176"
@@ -11,7 +9,9 @@ url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&un
 
 response = requests.get(url)
 data = json.loads(response.text)
-print(data)
-# print(data["temp":])
+plug = SmartPlug("192.168.1.162")
 
-
+if data["current"]['temp'] <= 45:
+    plug.turn_on()
+if data["current"]["temp"] >= 45:
+    plug.turn_off()
