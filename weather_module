@@ -7,7 +7,7 @@ threshold_temp = 45
 api_key = "cea276f0dbca870e3eb7ee5b1c563cf0"
 lat = "48.208176"
 lon = "16.373819"
-url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=imperial" % (lat, lon, api_key)
+url2 = f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid={api_key}&units=imperial"
 print(time.ctime())
 
 
