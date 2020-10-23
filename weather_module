@@ -1,7 +1,9 @@
 import requests
 import json
 from pyHS100 import SmartPlug
+import time
 
+print(time.ctime())
 api_key = "cea276f0dbca870e3eb7ee5b1c563cf0"
 lat = "48.208176"
 lon = "16.373819"
