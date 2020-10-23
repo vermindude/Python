@@ -17,7 +17,7 @@ plug = SmartPlug("192.168.1.162")
 
 if data["current"]['temp'] <= threshold_temp:
     plug.turn_on()
-    print("on")
+    print(f"temp is: {data['current']['temp']} so i am turning on")
 if data["current"]["temp"] >= threshold_temp:
     plug.turn_off()
-    print("off")
+    print(f"temp is: {data['current']['temp']} so i am turning off")
