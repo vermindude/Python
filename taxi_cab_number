@@ -1,0 +1,31 @@
+
+
+def taxi():
+    for first in range(100):
+        first_cubed = first ** 3
+        for second in range(100):
+            second_cubed = second ** 3
+            first_second_cubed = first_cubed + second_cubed
+            for third in range(100):
+                third_cubed = third ** 3
+                for fourth in range(100):
+                    fourth_cubed = fourth ** 3     
+                    third_fourth_cubed = third_cubed + fourth_cubed
+                    if first == third:
+                        continue
+                    if first == fourth:
+                        continue
+                    if second == third:
+                        continue
+                    if second == fourth:
+                        continue
+
+                    if first_second_cubed == third_fourth_cubed:
+
+                        print('first and second cubed: ', first_second_cubed,'third and fourth cubed: ',  third_fourth_cubed)
+                        if first_second_cubed >= 5000:
+                            return
+print('hi')
+
+taxi()
+
