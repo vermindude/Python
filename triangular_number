@@ -1,0 +1,12 @@
+def triangle_number():
+    count = 1
+    my_sum = 0
+    while count <= 100000:
+        my_sum = my_sum + count
+        if my_sum >= 100000:
+            print(my_sum, 'is the smallest 6 digit triangular number!')
+            break
+        count = count + 1
+   
+
+triangle_number()
