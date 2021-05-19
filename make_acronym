@@ -1,0 +1,11 @@
+def make_acronym(string):
+    split_string = string.split()
+    all_string = ''
+    count = 0
+    for x in range(len(split_string)):
+        z = split_string[count]
+        all_string = all_string + z[0:1]
+        
+        count = count + 1
+    return all_string.upper()
+make_acronym('Art of Problem Solving')
