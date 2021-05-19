@@ -1,0 +1,14 @@
+def remove_letter(string,letter):
+    '''remove_letter(string,letter) -> str
+    returns string with all occurrences of letter removed'''
+    
+    empty_string = ''
+    for x in string:
+        if x != letter:
+            empty_string += x
+    return empty_string
+
+    
+    # string
+# test cases
+print(remove_letter('Hello World', 'l'))
